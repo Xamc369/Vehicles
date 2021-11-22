@@ -19,7 +19,7 @@ namespace Vehicles.API.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<VehicleType>().HasIndex(x => x.Description);
+            modelBuilder.Entity<VehicleType>().HasIndex(x => x.Description).IsUnique();
         }
     }
 }
