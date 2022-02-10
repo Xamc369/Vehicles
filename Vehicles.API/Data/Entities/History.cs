@@ -48,5 +48,12 @@ namespace Vehicles.API.Data.Entities
         [Display(Name = "Total")]
         [DisplayFormat(DataFormatString = "{0:C2}")]
         public int Total => Details == null ? 0 : Details.Sum(x => x.TotalPrice);
+
+        [Display(Name = "Mecanico")]
+        //[JsonIgnore]
+        [Required(ErrorMessage = "El campo {0} es obligatorio.")]
+        public User User { get; set; }
+
+
     }
 }

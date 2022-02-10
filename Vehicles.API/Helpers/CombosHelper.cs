@@ -60,8 +60,8 @@ namespace Vehicles.API.Helpers
                 Text = x.Description,
                 Value = $"{x.Id}"
             })
-     .OrderBy(x => x.Text)
-     .ToList();
+                .OrderBy(x => x.Text)
+                .ToList();
 
             list.Insert(0, new SelectListItem
             {
