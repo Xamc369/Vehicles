@@ -52,5 +52,10 @@ namespace Vehicles.API.Controllers
             await _userHelper.LogOutAsync();
             return RedirectToAction("Index", "Home");
         }
+
+        public IActionResult NotAuthorized()
+        {
+            return View();
+        }
     }
 }
